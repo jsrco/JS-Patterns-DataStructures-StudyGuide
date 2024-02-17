@@ -128,6 +128,7 @@ const areThereDuplicates = () => {
 ```
 
 ## Multiple Pointers
+
 Creating pointers or values that correspond to an index or position and move towards the beginning, end, or middle based on a certain condition.
 
 Very efficient for solving problems with minimal space complexity as well. 
@@ -204,6 +205,7 @@ const isSubsequence = (str1, str2) => {
 ```
 
 ## Sliding Window
+
 This pattern involves creating a window which can either be an array or number from one position to another.
 
 Depending on a certain condition, the window either increases or closes (and a new window is created).
@@ -282,6 +284,7 @@ const findLongestSubstring = (str) => {
 ```
 
 ## Divide and Conquer
+
 This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data. 
 
 This pattern can tremendously decrease time complexity.
@@ -453,7 +456,9 @@ const collectStrings = (obj) => {
 
 ## Linear Search
 
-For unsorted arrays. Best case 0(1), worst case 0(n). Average is 0(n).
+For unsorted arrays.
+
+Best case 0(1), worst case 0(n). Average is 0(n).
 
 ```js
 const linearSearch = (arr, num) => {
@@ -468,7 +473,9 @@ const linearSearch = (arr, num) => {
 
 ## Binary Search
 
-Only works on sorted arrays. Best case 0(1), worst and average case 0(log n).
+Only works on sorted arrays.
+
+Best case 0(1), worst and average case 0(log n).
 
 ```js
 const binarySearch = (arr, elem) => {
@@ -507,7 +514,9 @@ const naiveSearch = (long, short) => {
 
 ## Bubble Sort
 
-A sorting algorithm where the largest values bubble up to the top. 0(n^2)
+A sorting algorithm where the largest values bubble up to the top. 
+
+0(n^2)
 
 ```js
 const bubbleSort = (arr) => {
@@ -554,7 +563,9 @@ const selectionSort = (arr) => {
 
 ## Insertion Sort
 
-Builds up the sort by gradually creating a larger left half which is always sorted. 0(n^2), Great for data coming in live or streaming.
+Builds up the sort by gradually creating a larger left half which is always sorted. 0(n^2). 
+
+Great for data coming in live or streaming.
 
 ```js
 const inerstionSort = (arr) => {
@@ -577,8 +588,11 @@ const inerstionSort = (arr) => {
 ## Merge Sort
 
 It's a combination of two things, merging and sorting.
+
 Exploits the fact that arrays of 0 or 1 elements are always sorted.
+
 Works by decomposing an array into smaller arrays of 0 or 1 elements, then building up a newly sorted array.
+
 0(n log n)
 
 ```js
@@ -618,7 +632,9 @@ const mergeSort = (arr) => {
 ## Quick Sort
 
 Like merge sort, exploits the fact that arrays of 0 or 1 element are always sorted.
+
 Works by selecting one element (called the "pivot") and finding the index where the pivot should end up in the sorted array.
+
 Best and average 0(n log n), worst 0(n^2).
 
 ```js
@@ -651,7 +667,9 @@ const quickSort = (arr, left = 0, right = arr.length - 1) => {
 ## Radix Sort
 
 Is a special sorting algorithm that works on lists of numbers. 
+
 It never makes comparisons between elements. It exploits the fact that information about the size of a number is encoded in the number of digits.
+
 0(nk)
 
 ```js
@@ -691,11 +709,17 @@ const radixSort = (nums) => {
 ## Singly Linked List
 
 A data structure that contains a head, tail, and length property. 
+
 Linked List consist of nodes. Each node has  value an a pointer to another node or null.
+
 Singly Linked List are an excellent alternative to arrays when insertion and deletion at the beginning are frequently required.
+
 Insertion:  0(1)
+
 Removal:    0(1) or (n)
+
 Searching:  0(n)
+
 Access:     0(n)
 
 ```js
@@ -832,12 +856,19 @@ class SinglyLinkedList {
 ## Doubly Linked List
 
 Almost identical to Singly Linked List, except every node has another pointer, to the previous node.
+
 More memory === More flexibility
+
 Better than Singly Linked List for finding nodes and can be done in half the time. But do take up more memory with extra pointer.
+
 Insertion:  0(1)
+
 Removal:    0(1)
+
 Searching:  0(n)
+
 Access:     0(n)
+
 Technically searching is 0(n/2), but that is still o(n).
 
 ```js
@@ -983,11 +1014,17 @@ class DoublyLinkedList {
 ## Stack
 
 LIFO data structure. Last in first out.
+
 Last element added will be the first element removed.
+
 Used for function invocations, undo / redo, and for routing.
+
 Insertion:  0(1)
+
 Removal:    0(1)
+
 Searching:  0(n)
+
 Access:     0(n)
 
 ```js
@@ -1032,11 +1069,17 @@ class Stack {
 ## Queue
 
 FIFO data structure. First in first out.
+
 First element added will be the first element removed.
+
 Used for processing task, uploading resources, and printing / task processing.
+
 Insertion:  0(1)
+
 Removal:    0(1)
+
 Searching:  0(n)
+
 Access:     0(n)
 
 ```js
@@ -1081,12 +1124,19 @@ class Queue {
 ## Binary Search Tree
 
 A data structure that consist of nodes in a parent / child relationship.
+
 Usage examples: network routing, HTML DOM, abstract syntax tree, AI, folders in operating systems, and computer file systems.
+
 Binary Search Tree every parent node can only have at most 2 children.
+
 Every node to the left of a parent node is always less than the parent.
+
 Every node to the right of a parent node is always greater than the parent.
+
 Insertion:  0(log n)
+
 Searching:  0(log n)
+
 Not guaranteed.
 
 ```js
@@ -1206,12 +1256,19 @@ class BinarySearchTree {
 ## Binary Heap
 
 Very similar to a binary search tree.
+
 In a Max Binary Heap, parent nodes are always larger than child nodes. 
+
 In a Min Binary Heap, parent nodes are always smaller than child nodes.
+
 Binary Heaps are used to implement priority queues, which are very commonly used data structures.
+
 Used quite a bit for graph traversal algorithms.
+
 Insertion:  0(log n)
+
 Removal:    0(log n)
+
 Search:     0(n)
 
 ```js
@@ -1353,13 +1410,21 @@ class PriorityQueue {
 ## Hash Table
 
 Hash tables are used to store key-value pairs.
+
 They are like arrays, but the keys are not ordered.
+
 Unlike arrays, hash tables are fast for all of the following operations: finding values, adding new values, an removing values.
+
 A good hash should be fast, distribute keys uniformly, and be deterministic.
+
 Separate chaining and linear probing are two strategies used to deal with two keys that hash to the same index.
+
 Insertion:  0(1)
+
 Deletion:   0(1)
+
 Access:     0(1)
+
 Average case.
 
 ```js
@@ -1427,13 +1492,21 @@ class HashTable {
 ## Graph
 
 A graph data structure consists of a finite (and possibly mutable) set of vertices or nodes or points, together with a set of unordered pairs of these vertices for an undirected graph or a set of ordered pairs for a directed graph.
+
 Uses for graphs: social networks, location / mapping, routing algorithms, visual hierarchy, file system optimizations
+
 Vertex / Edge
+
 Add V:      0(1)
+
 Add E:      0(1)
+
 Remove V:   0(|V| + |E|)
+
 Remove E:   0(|E|)
+
 Query:      0(|V| + |E|)
+
 Storage:    0(|V| + |E|)
 
 ```js
